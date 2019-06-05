@@ -17,11 +17,17 @@
 
 `
 dbpath=/home/server/mongodb/db
+
 logpath=/home/server/mongodb/logs/mongodb.log
+
 logappend=true
+
 journal=true
+
 port=27017
+
 fork=true
+
 auth=false
 `
 
