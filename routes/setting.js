@@ -45,7 +45,6 @@ router.get('/updateuserName',function(req,res,next){
     },{
         userName:req.query.userName
     }).then((up) => {
-        console.log(up);
         if(up.ok == 1){
             responseData.code = 1;
             responseData.message = "昵称更新成功";

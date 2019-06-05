@@ -58,7 +58,7 @@ router.get('/login',function(req,res,next){
         if(login){
             res.cookie("userId",login._id,{//往响应里面去写，所以用res
                 path:'/',//放到根目录里面去，而不是子目录
-                maxAge:1000*60*60//单位是毫秒*60
+                maxAge:1000*60*180//单位是毫秒*60
             })
             responseData.code = 1;
             responseData.message = "登陆成功";
