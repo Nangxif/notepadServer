@@ -9,6 +9,7 @@ var logger = require('morgan');//HTTP请求日志中间件
 var settingRouter = require('./routes/setting');
 var usersRouter = require('./routes/users');
 var fnRouter = require('./routes/function');
+var friendRouter = require('./routes/friend');
 
 var app = express();//创建一个Express应用，express()是一个由express模块导出的入口
 
@@ -39,6 +40,7 @@ app.all('*', function (req, res, next) {
 app.use('/setting', settingRouter);
 app.use('/users', usersRouter);
 app.use('/fn', fnRouter);
+app.use('/friend',friendRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

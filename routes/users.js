@@ -55,6 +55,7 @@ router.get('/login',function(req,res,next){
         tel:req.query.tel,
         password:req.query.password
     }).then((login) => {
+        console.log(login);
         if(login){
             res.cookie("userId",login._id,{//往响应里面去写，所以用res
                 path:'/',//放到根目录里面去，而不是子目录

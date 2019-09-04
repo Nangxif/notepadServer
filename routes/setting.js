@@ -4,7 +4,8 @@ const User = require('../models/userModels');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('setting', { title: 'Setting' });
+  //res.render('setting', { title: 'Setting' });
+    res.end('respond with a resource');
 });
 //统一返回的格式
 let responseData;
@@ -80,6 +81,7 @@ router.get('/updateSex',function(req,res,next){
 })
 //修改手机
 router.get('/updateTel',function(req,res,next){
+    console.log(req.query.tel);
     User.updateOne({
         _id:req.cookies.userId
     },{
